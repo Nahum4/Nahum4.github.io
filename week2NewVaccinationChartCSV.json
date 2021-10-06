@@ -1,0 +1,60 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    "title": {
+      "text": "New People Fully Vaccinated",
+      "subtitle":null,
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "middle",
+      "color": "black"
+    },
+    
+     "data": {
+      "url": "https://raw.githubusercontent.com/Nahum4/Nahum4.github.io/main/moreVaccinationData.csv",
+      "format": {"type": "csv"}
+    },
+  
+     "transform":[
+        
+        {"filter": {
+          "field": "areaName", 
+          "oneOf": ["Bristol, City of", "Leeds", "Nottingham"]}
+          }
+  
+  
+      ],
+    
+    
+    "height": 300,
+    "width": 310,
+     
+    "mark": {"type": "line", "strokeWidth": 1.5, "point": false},
+   
+    "encoding": {
+  
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "title": null,
+        "axis": {"grid": false}
+      },
+  
+      "y": {
+        "field": "newPeopleVaccinatedCompleteByVaccinationDate",
+        "type": "quantitative",
+        "title": null,
+        "axis": {"grid": false}
+      },
+  
+      "color": {
+        "field": "areaName",
+        "type": "nominal",
+        "scale": {"scheme": "inferno"},
+        "title": null,
+        "legend": {
+          "orient": "top-left", 
+          "fillColor": "#ffffff"}
+      }
+  }
+  }
