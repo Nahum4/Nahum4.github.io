@@ -1,24 +1,37 @@
-
-
-
-
-/* This is my first proper css file */
+/*This is my edit of Charlie Meyrick's example CSS file (with some extra bits added). */
 
 body{
-    background-color: rgb(233, 233, 233);
+
+    background-color: #282828 ;
+    max-width: 450px;
+    margin: auto;
 }
 
-h1, h3, p{
-    color:rgb(17, 17, 17);
-    font-family: 'Roboto', sans-serif;
+h1{
+
+    color: #bb86fc;
+    font-family: 'Poppins', sans-serif ;
 }
+
+h3{
+    color: #03dac6;
+    font-family: 'Poppins', sans-serif ;
+}
+
+p{font-family: 'Poppins', sans-serif;
+color: white;
+}
+
+
 
 .chart{
-    background-color: white;
-    width:330px;
+    width: 330px;
     border-width: 10px;
+    background-color: #404040;
     border-style: solid;
     border-radius: 5px;
-    border-color: white;
-}
+    border-color: #404040;
+    margin: auto;
 
+
+}
