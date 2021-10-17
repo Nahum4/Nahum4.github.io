@@ -1,0 +1,43 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+      "text": "Obesity Rates Across the UK",
+      "subtitle":"% of the Population who are Obese. Source: NHS Digital",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"},
+  
+ "data":{
+  "values":[
+   { "Region": "North East", "Value": 28 }, { "Region": "North West", "Value": 29 },
+{ "Region": "Yorkshire & the Humber", "Value": 23 }, { "Region": "East Midlands", "Value": 24 },
+{ "Region": "West Midlands", "Value": 30 }, { "Region": "East of England", "Value": 24 },
+{ "Region": "London", "Value": 18 }, { "Region": "South East", "Value": 23 }, { "Region": "South West", "Value": 28 }
+  ]
+},
+  
+  "height": 300,
+  "width": 260,
+
+  "mark": {
+    "type": "bar",
+    "color": "#EC7176"},
+
+"encoding": {
+     "x": {
+       "field": "Region",
+       "type": "nominal",
+       "axis": {
+         "title": null,
+         "grid": false,
+         "ticks": false,
+         "labelAngle": 45}},
+
+      "y": {
+        "field": "Value",
+        "type": "quantitative",
+        "title": "",
+        "axis": {"grid": false}}
+}
+}
