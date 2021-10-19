@@ -1,30 +1,22 @@
-/*This is my edit of Charlie Meyrick's example CSS file (with some extra bits added). */
-
-body{
-
     background-color: #282828 ;
     max-width: 450px;
     margin: auto;
 }
-
 h1{
-
     color: #bb86fc;
     font-family: 'Poppins', sans-serif ;
 }
-
 h3{
     color: #03dac6;
     font-family: 'Poppins', sans-serif ;
 }
-
 p{font-family: 'Poppins', sans-serif;
 color: white;
 }
 
 
-
 .chart{
+    width: 400px;
     width: 370px;
     border-width: 10px;
     background-color: #404040;
@@ -32,52 +24,4 @@ color: white;
     border-radius: 5px;
     border-color: #404040;
     margin: auto;
-
-
 }
-
-
-
-   <style>
-    button {
-      display: inline-block;
-      background-color: #272727;
-      border-radius: 10px;
-      border: 4px solid #white;
-      color: white;
-      text-align: center;
-      font-size: 25px;
-      padding: 18px;
-      width: 160px;
-      transition: all 0.5s;
-      cursor: pointer;
-      margin: 5px;
-    }
-    button span {
-      cursor: pointer;
-      display: inline-block;
-      position: relative;
-      transition: 0.5s;
-    }
-    button span:after {
-      content: '\00bb';
-      position: absolute;
-      opacity: 0;
-      top: 0;
-      right: -20px;
-      transition: 0.5s;
-    }
-    button:hover {
-      background-color: ##272727;
-border-radius: 10px;
-      border: 4px solid #03DAC6;
-      color: white;
-    }
-    button:hover span {
-      padding-right: 25px;
-    }
-    button:hover span:after {
-      opacity: 1;
-      right: 0;
-    }
-  </style>
