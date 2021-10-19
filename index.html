@@ -28,116 +28,59 @@
 <body>
 
     <h1>Nahum Locke</h1>
-    <h1>Data Science 2021.</h1>
+    <h2>Welcome to my website!</h2>
 
-<div class="wrap">
-    <p class="rubric-launch">For my project page, click <a class="textLink" href="Project.html"> here</a>.</p> 
-</div>
-    
-    <h3>Covid-19</h3>
+<!-- Adding and styling buttons with links to my relevant pages. I edited code from W3Schools.com for this. -->
+   
+    <style>
+      button {
+        display: inline-block;
+        background-color: #272727;
+        border-radius: 10px;
+        border: 4px solid #white;
+        color: white;
+        text-align: center;
+        font-size: 25px;
+        padding: 18px;
+        width: 160px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+      button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      button:hover {
+        background-color: ##272727;
+ border-radius: 10px;
+        border: 4px solid #03DAC6;
+        color: white;
+      }
+      button:hover span {
+        padding-right: 25px;
+      }
+      button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+    </style>
 
-  <div class="wrap">
-    <p class="rubric-launch">The first chart tracks Covid-19 cases by UK region. This chart was designed by Charlie Meyrick; click <a class="textLink" href="charlieMeyrick.html"> here</a> for his bio.</p> 
+<a href="Project.html"><button type="button">Project</button></a>
+<a href="Homework.html"><button type="button">Homework</button></a>
 
-    </div>
-
-<!--Vaga embed, with notes for what is going on-->
-<div class="chart" id="firstChart">
-
-  <script>
-    // Following the script tag we are using Javascript.
-    // One way to tell is to see how comments work...
-    // First job is to set the chart as a JS variable:
-    var myChart1 = "chart1_covidUKRegions.json";
-    // Now we simply insert it, using Vega's embed code:
-    // The embed function needs to be told the location, and what to put there. 
-    vegaEmbed('#firstChart', myChart1);
-  </script>
-
-</div>
-
-  <h3>Productivity puzzle</h3>
-
-  <p>The second chart looks at productivity in the UK. As before, this chart was designed by Charlie Meyrick.</p>
-
-<div class="chart" id="secondChart">
-  <script>
-    var myChart2 = "chart2_ukProductivity.json";
-    vegaEmbed('#secondChart', myChart2);
-  </script>
-    
-</div>
- 
-  <h3>Inflation</h3>
-
-  <p>The third chart looks at inflation in the UK since 1800. I pulled the code for this chart from RapidCharts.io. As you can see, it's an interactive chart. </p>
-    
-<div class="chart" id="thirdChart">
-  <script>
-    var myChart3 = "inflationInteractiveChartPremade.json";
-    vegaEmbed('#thirdChart', myChart3);
-  </script>
-    
-</div>
-    
-    
-  <h3>COVID-19</h3>
-
-  <p>My fourth chart looks at new COVID cases in three regions of the UK. I designed this chart by editing Charlie Meyrick's code.</p>
-  <p>This chart uses data from a government API.</p>
-    
-<div class="chart" id="fourthChart">
-  <script>
-    var myChart4 = "week2CovidChartAPI.json";
-    vegaEmbed('#fourthChart', myChart4);
-  </script>
-    
-</div>
-        
-  <p>My fifth chart looks at the number of new people who are fully vaccinated in the same three regions of the UK. As above, I used some of Charlie Meyrick's code for this one.</p>
-  <p>This chart uses data hosted on GitHub.</p>
-  <div class="wrap">
-    <p class="rubric-launch">To see the data in this chart, click <a class="textLink" href="myCovidData.csv"> here</a>.</p> 
-</div>
-
-    
-<div class="chart" id="fifthChart">
-  <script>
-    var myChart5 = "week2NewVaccinationChartCSV.json";
-    vegaEmbed('#fifthChart', myChart5);
-  </script>
-    
-</div>
-  
-<!--Homework 4-->
-    
-</div>
-    
-  <p>This is my sixth chart. It looks at... </p>
-  <p>I have added an observation to this chart... for homework 4.</p>
-
-    
-<div class="chart" id="sixthChart">
-  <script>
-    var myChart6 = "Inset chart URL here";
-    vegaEmbed('#sixthChart', myChart6);
-  </script>
-    
-</div>
-  
-      <p>For my seventh chart, I have created a bar chart showing the percentage of obese people in different regions of the UK (excluding the morbidly obese).</p>
-  <p>The data for this chart is "in-line" JSON that I wrote myself. The data is from NHS Digital.</p>
-
-    
-<div class="chart" id="seventhChart">
-  <script>
-    var myChart7 = "obesityRatesByRegionManualData.json";
-    vegaEmbed('#seventhChart', myChart7);
-  </script>
-    
-</div>
-    
-</body>
-
-
+  </body>
 </html>
+
+
+
