@@ -38,15 +38,14 @@ p{
 
 .dashboardButton{
     color:#fff;
-    background:#404040;
+    background:#ed3330;
     padding:20px;
     border-radius: 10px;
-    border-color: #03dac6;
 }
 
 
 .dashboardButton:hover{
-background: #03dac6;
+background: #494949;
 letter-spacing: 1px;
 -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
 -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
