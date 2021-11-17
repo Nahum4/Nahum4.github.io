@@ -1,0 +1,52 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://api.beta.ons.gov.uk/v1/datasets/suicides-in-the-uk/editions/2020/versions/1/observations?time=*&geography=E92000001",
+    "format":{
+      "type": "json",
+      "property": "observations"
+    }},
+    "title":{
+      "text":"Suicide Registrations in England",
+      "subtitleFontWeight":"bold",
+      "subtitle":"Source: ONS API (Beta)",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":"10",
+      "anchor": "start",
+      "color":"#FBFBFB",
+      "subtitleColor":"#C9CACD"
+    },
+  
+    "width":300,
+    "height":300,
+    "config": {
+      "axis": {
+        "grid": false,
+        "cell":{
+          "strokeWidth":"transparent"
+        }
+      }
+    },
+    "background":"#2F353F",
+     
+  "mark":{
+    "type": "line",
+    "color": "#EEC331",
+    "strokeWidth":2,
+    "opacity":1
+    },
+  "encoding": {
+    "x": {"field": "dimensions.Time.id", "type": "temporal", "title":null, 
+    "axis":{
+      "tickColor":"#C9CACD",
+      "labelColor":"#FBFBFB"
+    }},
+    "y": {"field": "observation", "type": "quantitative", "title":null,
+     "axis":{
+      "tickColor":"#C9CACD",
+      "labelColor":"#FBFBFB"
+    }, 
+    "scale":{"domain":[3500,5500]}}   
+  
+  }
+}
