@@ -1,0 +1,41 @@
+{
+    "entry": [             
+        {
+            "amount": 2.9,
+            "year": 2013,
+            "item_id": 4
+        },
+        {
+            "amount": 2.3,
+            "year": 2014,
+            "item_id": 4
+        },
+        {
+            "amount": 3,
+            "year": 2015,
+            "item_id": 4
+        },
+        {
+            "amount": 3,
+            "year": 2016,
+            "item_id": 4
+        },
+        {
+            "amount": 3.1,
+            "year": 2017,
+            "item_id": 4
+        },
+        {
+            "amount": 3.25,
+            "year": 2018,
+            "item_id": 4
+        },
+        {
+            "amount": 3.5,
+            "year": 2019,
+            "item_id": 4
+        }
+    ],
+    "city": "Nottingham, United Kingdom",
+    "currency": "GBP"
+}

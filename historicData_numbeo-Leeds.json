@@ -1,0 +1,46 @@
+{
+    "entry": [               
+        {
+            "amount": 2.95,
+            "year": 2013,
+            "item_id": 4
+        },
+        {
+            "amount": 3.5,
+            "year": 2014,
+            "item_id": 4
+        },
+        {
+            "amount": 3,
+            "year": 2015,
+            "item_id": 4
+        },
+        {
+            "amount": 3.3,
+            "year": 2016,
+            "item_id": 4
+        },
+        {
+            "amount": 3.5,
+            "year": 2017,
+            "item_id": 4
+        },
+        {
+            "amount": 3.8,
+            "year": 2018,
+            "item_id": 4
+        },
+        {
+            "amount": 3.5,
+            "year": 2019,
+            "item_id": 4
+        },
+        {
+            "amount": 4,
+            "year": 2020,
+            "item_id": 4
+        }
+    ],
+    "city": "Leeds, United Kingdom",
+    "currency": "GBP"
+}

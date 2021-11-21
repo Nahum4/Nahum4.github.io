@@ -1,0 +1,46 @@
+{
+    "entry": [        
+        {
+            "amount": 3,
+            "year": 2013,
+            "item_id": 4
+        },
+        {
+            "amount": 3.4,
+            "year": 2014,
+            "item_id": 4
+        },
+        {
+            "amount": 3.7,
+            "year": 2015,
+            "item_id": 4
+        },
+        {
+            "amount": 3.725,
+            "year": 2016,
+            "item_id": 4
+        },
+        {
+            "amount": 3.9,
+            "year": 2017,
+            "item_id": 4
+        },
+        {
+            "amount": 4.225,
+            "year": 2018,
+            "item_id": 4
+        },
+        {
+            "amount": 4.5,
+            "year": 2019,
+            "item_id": 4
+        },
+        {
+            "amount": 4.3,
+            "year": 2020,
+            "item_id": 4
+        }
+    ],
+    "city": "Bristol, United Kingdom",
+    "currency": "GBP"
+}
