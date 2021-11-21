@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Nahum4/Nahum4.github.io/main/historicData_numbeo-Bristol.json",
+    "format":{
+      "type": "json",
+      "property": "entry"
+    }},
+    "title":{
+      "text":"The Price of a Pint in Bristol",
+      "subtitleFontWeight":"bold",
+      "subtitle":"Source: Numbeo Cost of Living API",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":"10",
+      "anchor": "start",
+      "color":"#FBFBFB",
+      "subtitleColor":"#C9CACD"
+    },
+  
+    "width":300,
+    "height":300,
+    "config": {
+      "axis": {
+        "grid": false,
+        "cell":{
+          "strokeWidth":"transparent"
+        }
+      }
+    },
+    "background":"#2F353F",
+     
+  "mark":{
+    "type": "line",
+    "color": "#EEC331",
+    "strokeWidth":2,
+    "opacity":1
+    },
+  "encoding": {
+    "x": {"field": "year", "type": "nominal", "title":null, 
+    "axis":{
+      "tickColor":"#C9CACD",
+      "labelColor":"#FBFBFB",
+      "labelAngle":""
+    }},
+    "y": {"field": "amount", "type": "quantitative", "title":"Average Price, £",
+     "axis":{
+      "tickColor":"#C9CACD",
+      "labelColor":"#FBFBFB",
+      "titleColor":"#FBFBFB"      
+    },
+    "scale":{"domain":[2,5]}
+    }   
+  
+  }
+}
