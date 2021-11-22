@@ -35,6 +35,8 @@
   
   <h3>Data stories</h3>
   
+    <p>This chart is the standard spec (with the weird colour scheme way)</p>
+        
   <div class="chart" id="fifthteenthChart">
 <script>
 var myChart15 = "lockdownGDPLoss.json";
@@ -43,12 +45,23 @@ vegaEmbed('#fifthteenthChart', myChart15);
 
 </div>
     
+    <p>This chart has the default colour scheme</p>
+    
     <div class="chart" id="testChart1">
 <script>
 var myChart90 = "GDPChart2.json";
 vegaEmbed('#testChart1', myChart90);
 </script>
 
-</div>
+    </div>
     
+    <p>This chart has the default colour scheme and uses data hosted as a csv on Github</p>
+    
+    <div class="chart" id="testChart2">
+<script>
+var myChart91 = "GDPchartWithCSV.json";
+vegaEmbed('#testChart2', myChart91);
+</script>
+
+</div>
     
