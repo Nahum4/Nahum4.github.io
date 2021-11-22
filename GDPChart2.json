@@ -1,0 +1,33 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "UK GDP Loss Following National Lockdown",
+    "subtitle": "% Loss of GDP the month after a national lockdown was announced. Source: ONS",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "values": [
+      {"Month": "April 2020", "Value": "18.84"},
+      {"Month": "November 2020", "Value": "2.29"}
+    ]
+  },
+  "height": 300,
+  "width": 340,
+  "mark": {"type": "bar", "width": {"band": 0.5}},
+  "encoding": {
+    "x": {
+      "field": "Month",
+      "type": "nominal",
+      "axis": {"title": null, "grid": false, "ticks": false, "labelAngle": 0}
+    },
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "title": "% Change in GDP",
+      "axis": {"grid": false}
+    }
+  }
+}
