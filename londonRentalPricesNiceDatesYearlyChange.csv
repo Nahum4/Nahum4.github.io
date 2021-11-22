@@ -1,4 +1,4 @@
-,time,value,month,year,year2,day,date
+observation,time,value,month,year,year2,day,date
 0,Jun-06,2.6,Jun,06,2006,01,2006-Jun-01
 1,Nov-08,4.6,Nov,08,2008,01,2008-Nov-01
 2,May-09,3.3,May,09,2009,01,2009-May-01
