@@ -1,0 +1,31 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "UK GDP Loss Following National Lockdown",
+    "subtitle": "% Loss of GDP the month after a national lockdown was announced. Source: ONS",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/Nahum4/Nahum4.github.io/main/chrisGilesGDP.csv"
+  },
+  "format": {"type": "csv"},
+  "height": 300,
+  "width": 340,
+  "mark": {"type": "bar", "width": {"band": 0.5}},
+  "encoding": {
+    "x": {
+      "field": "label",
+      "type": "nominal",
+      "axis": {"title": null, "grid": false, "ticks": false, "labelAngle": 0}
+    },
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "title": "% Loss in GDP",
+      "axis": {"grid": false}
+    }
+  }
+}
