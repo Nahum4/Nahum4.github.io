@@ -30,9 +30,12 @@
     <h1>Nahum Locke</h1>
     <h1>Data Science 2021.</h1>
 
-    <p>This is my portfolio page. The charts on this page use a variety of data science techniques in their creation or the data they use. Some charts here may also appear in my <a class="textLink" href="Project.html">project page</a>.</p>
+    <p>This is my portfolio page. The charts on this page use a variety of data science techniques in their creation or the data they use. Some charts here may also appear in my <a class="textLink" href="Project.html">project page</a>. I have created these charts over the course of 6 weeks as I learnt the necessary skills, as such the colour schemes are quite inconsistent. See my <a class="textLink" href="Project.html">project page</a> for a more visually pleasing demonstration of my skills.</p>
     <p>Click <a class="textLink" href="index.html">here</a> to return to the homepage.</p>
+   
 
+    <!--Homework 2-->
+    
 </div>
     
 <h3>Covid-19</h3>
@@ -71,7 +74,7 @@ vegaEmbed('#secondChart', myChart2);
 
 <h3>Inflation</h3>
 
-<p>The third chart looks at inflation in the UK since 1800. I pulled the code for this chart from RapidCharts.io. As you can see, it's an interactive chart. </p>
+<p>The third chart looks at inflation in the UK since 1800. I pulled the code for this chart from RapidCharts.io. As you can see, it's an interactive chart.</p>
 
 <div class="chart" id="thirdChart">
 <script>
@@ -81,11 +84,11 @@ vegaEmbed('#thirdChart', myChart3);
 
 </div>
 
-
+<!--Homework 3-->
+    
 <h3>COVID-19</h3>
 
-<p>My fourth chart looks at new COVID cases in three regions of the UK. I designed this chart by editing Charlie Meyrick's code.</p>
-<p>This chart uses data from a government API.</p>
+<p>My fourth chart looks at new COVID cases in three regions of the UK. This chart uses the government API as it's data source, so should update automatically.</p>
 
 <div class="chart" id="fourthChart">
 <script>
@@ -95,8 +98,8 @@ vegaEmbed('#fourthChart', myChart4);
 
 </div>
     
-<p>My fifth chart looks at the number of new people who are fully vaccinated in the same three regions of the UK. As above, I used some of Charlie Meyrick's code for this one.</p>
-<p>This chart uses data hosted on GitHub.</p>
+<p>My fifth chart looks at the number of new people who are fully vaccinated in the same three regions of the UK. To get the data for this chart I edited the URL of the API used in my fourth chart. I downloaded the data, uploaded it to Github and used that as the chart's data source. Because of this, this chart will load faster than chart 4, but won't stay up to date.</p>
+
 <div class="wrap">
 <p class="rubric-launch">To see the data in this chart, click <a class="textLink" href="myCovidData.csv"> here</a>.</p> 
 </div>
@@ -127,8 +130,8 @@ vegaEmbed('#sixthChart', myChart6);
 
 </div>
 
-  <p>For my seventh chart, I have created a bar chart showing the percentage of obese people in different regions of the UK (excluding the morbidly obese).</p>
-<p>The data for this chart is "in-line" JSON that I wrote myself. The data is from NHS Digital.</p>
+  <p>This bar chart shows the percentage of obese people in different regions of the UK (excluding the morbidly obese).</p>
+<p>The data for this chart is an "in-line" JSON that I wrote myself. The data is from NHS Digital; I copied across the observations to the chart's JSON.</p>
 
 
 <div class="chart" id="seventhChart">
@@ -137,10 +140,12 @@ var myChart7 = "obesityRatesByRegionManualData.json";
 vegaEmbed('#seventhChart', myChart7);
 </script>
 
+    <!--Homework 5-->
+    
 </div>
 
 <h3>APIs</h3>
-<p>These charts use APIs that I found, accessed and edited the URLs of as their data source. As such, they're always up to date.</p>
+<p>These charts use APIs that I signed up for, accessed and edited the URLs of as their data source. As such, they're always up to date.</p>
 
 <p>The first looks at the number of registered suicides in the UK over time. If you, or anyone you know, is suffering with mental health, please call 116 123 for free.</p>
 
@@ -150,8 +155,6 @@ vegaEmbed('#seventhChart', myChart7);
 var myChart8 = "suicideChartAPI.json";
 vegaEmbed('#eighthChart', myChart8);
 </script>
-
-  <p>Note - the colour schemes are inconsistent on this page at the minute as I'm still deciding on a scheme for my project.</p>
     
 </div>
 
@@ -165,9 +168,11 @@ var myChart9 = "Insert chart URL here";
 vegaEmbed('#ninthChart', myChart9);
 </script>
 
+    <!--Homework 6-->
+    
 </div>
 
-<h3>Loops</h3>
+<h3>Python Fetch/Loops</h3>
   <p>The following 4 charts show the average price of a draught pint of lager in different cities.</p>
 <p>I downloaded the data for these charts by using fetch in Python, writing a loop to make 4 separate calls to the Numbeo cost of living API.</p>
 
@@ -210,10 +215,12 @@ vegaEmbed('#thirteenthChart', myChart13);
 
     <br>
     
+    <!--Homework 7-->
+    
 </div>
 
 <h3>Data Scraping</h3>
-<p>To come: Build a data scraper, save data to Github, chart results</p>
+<p>To come: Build a data scraper in Python, save data to Github, chart results</p>
 
 <div class="chart" id="fourteenthChart">
 <script>
@@ -223,17 +230,47 @@ vegaEmbed('#fourteenthChart', myChart14);
 
 </div>
 
-    
+    <!--Homework 8-->
 
 <h3>Data Stories</h3>
 
   <p>Chris Giles of the Financial Times claimed that the economy had adapted well to COVID and lockdowns such that the reduction in GDP following the second UK lockdown was far smaller. Using ONS GDP data, I calculated the percentage loss to GDP following each lockdown and charted my results. This chart supports Chris’ statement – the reduction in GDP following the second lockdown was roughly 16 percentage points lower.</p>
-
+<p>Note - at the minute I'm having trouble getting the data for this chart to show up.</p>
 
 <div class="chart" id="fifthteenthChart">
 <script>
 var myChart15 = "lockdownGDPLoss.json";
 vegaEmbed('#fifthteenthChart', myChart15);
+</script>
+
+</div>
+
+<!--Homework 9-->
+
+<div>
+    
+    <h3>Advanced Analytics</h3>
+    <p>To come: build a chart using an advanced analytic technique from any data source.</p>
+    
+   <div class="chart" id="sixthteenthChart">
+<script>
+var myChart16 = "insert url here";
+vegaEmbed('#sixthteenthChart', myChart16);
+</script>
+
+</div>
+    
+    <!--Homework 10-->
+
+<div>
+    
+    <h3>Interactivity</h3>
+    <p>To come: build and embed an interactive chart.</p>
+    
+   <div class="chart" id="seventeenthChart">
+<script>
+var myChart17 = "insert url here";
+vegaEmbed('#seventeenthChart', myChart17);
 </script>
 
 </div>
