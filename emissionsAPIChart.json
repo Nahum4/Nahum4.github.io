@@ -1,0 +1,59 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "title": {
+    "text": "Ozone Concentration - Peak District vs Newham",
+    "subtitleFontWeight": "bold",
+    "subtitle": "Average daily concentration for the Peak District (yellow) and Newham (red)",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "#FBFBFB",
+    "subtitleColor": "#C9CACD"
+  },
+
+    "width":320,
+    "height":300, 
+    "config": {"axis": {"grid": false, "cell": {"strokeWidth": "transparent"}}},
+  "background": "#2F353F",
+  "mark": {"type": "line", "strokeWidth": 2, "opacity": 1},
+
+    "encoding": {
+      
+      "x": {
+        "field": "end", 
+        "type": "temporal",
+        "title":null,
+         "axis": {"tickColor": "#C9CACD", "labelColor": "#FBFBFB"}
+        },
+  
+      "y": {
+        "field": "average", 
+        "type": "quantitative",
+        "scale": {"domain": [0.10, 0.13]},
+        "title":null,
+        "axis": {"tickColor": "#C9CACD", "labelColor": "#FBFBFB"}
+        }
+    },
+  
+
+    "layer":[
+      {"data": {"url": "https://api.v2.emissions-api.org/api/v2/ozone/average.json?point=53.3344%2C-1.7864&begin=2019-02-10&end=2021-02-11&limit=100&offset=0"},
+  
+    "mark":{
+      "type": "line",
+      "color": "#EEC331",
+      "opacity":0.8
+    }
+    },      
+    
+    {"data": {"url": "https://api.v2.emissions-api.org/api/v2/ozone/average.json?point=51.5325%2C0.0318&begin=2019-02-10&end=2021-02-11&limit=100&offset=0"},
+  
+    "mark":{
+      "type": "line",
+      "color":"red",
+      "opacity":0.8
+    }
+    }
+  ]  
+}
