@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Nahum4/Nahum4.github.io/main/scrapedHousePrices3.csv"
+  },
+  "title": {
+    "text": "Average House Prices Across the UK",
+    "subtitleFontWeight": "bold",
+    "subtitle": "May 2021. Data Scraped from GOV.UK",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": "10",
+    "anchor": "start",
+    "color": "#FBFBFB",
+    "subtitleColor": "#C9CACD"
+  },
+  "width": 300,
+  "height": 330,
+  "config": {"axis": {"grid": false, "cell": {"strokeWidth": "transparent"}}},
+  "background": "#2F353F",
+  "mark": {"type": "bar", "color": "#EEC331", "width":25, "tooltip":true, "cornerRadius":2},
+  "encoding": {
+    "x": {
+      "field": "Region",
+      "type": "nominal",
+      "title": null,
+      "axis": {
+        "tickColor": "#C9CACD",
+        "labelColor": "#FBFBFB",
+        "labelAngle": "90"
+      }
+    },
+    "y": {
+      "field": "Average price May 2021",
+      "type": "quantitative",
+      "title": "Average Price, £",
+      "axis": {
+        "tickColor": "#C9CACD",
+        "labelColor": "#FBFBFB",
+        "titleColor": "#FBFBFB"},
+        "scale": {"domain": [0, 530000]}
+    }
+  }
+}
