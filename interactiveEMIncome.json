@@ -14,8 +14,8 @@
     "subtitleColor": "#C9CACD"
   },
 
-    "width": 300,
-  "height": 300,
+    "width": 360,
+  "height": 360,
   "config": {"axis": {"grid": false, "cell": {"strokeWidth": "transparent"}}},
   "background": "#2F353F",
   "mark": {"type": "line", "color": "#EEC331", "strokeWidth": 2, "opacity": 0.9},
