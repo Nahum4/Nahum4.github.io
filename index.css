@@ -52,6 +52,8 @@ p{
     display: inline-block;
 }
 
+.vega-bind-name{
+    color:red}
 
 .dashboardButton:hover{
 background: #494949;
