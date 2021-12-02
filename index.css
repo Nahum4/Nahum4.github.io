@@ -52,8 +52,11 @@ p{
     display: inline-block;
 }
 
-.vega-bind-name{
-    color:red !important; 
+.span{
+    color:white !important; 
+    font-family: 'Poppins', sans-serif;
+    background-color: #404040;
+    
 
 }
 
