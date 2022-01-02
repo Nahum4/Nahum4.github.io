@@ -6,23 +6,26 @@ body{
 }
 
 h1{
-
+    font size: 60px;
     color: #bb86fc;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
 h2{
+    font size: 45px;
     color: white;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
 
 h3{
+    font size: 30px;
     color: #03dac6;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
 p{
+    font size: 30px;
     font-family: 'Source Sans Pro', sans-serif;
     color: white;
 }
