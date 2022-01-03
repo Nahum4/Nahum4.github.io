@@ -1,0 +1,70 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "Data from UK Parliament: Average earnings by age and region (November 2021). I downloaded the Excel workbook, extracted the appropriate data, reformated it, uploaded it to Github and used the raw link as the data for this chart.",
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/Nahum4/Nahum4.github.io/main/median%20weekly%20pay%20by%20super%20region%202021%20prices.csv"
+  },
+
+  "title": {
+    "text": "Earnings Across England",
+    "subtitle": "April 2021. Full-Time Employees Only. Source: UK Parliament",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": "12",
+    "font": "Franklin Gothic Book",
+    "subtitleFont": "Franklin Gothic Book",
+    "fontSize": 15,
+    "fontWeight":"normal",
+    "anchor": "middle",
+    "color": "#FBFBFB",
+    "subtitleColor": "#C9CACD"
+  },
+
+  "width": 350,
+  "height": 330,
+  "config": {"axis": {"grid": false, "cell": {"strokeWidth": "transparent"}}},
+
+  "background": "#2F353F",
+  "mark": {
+    "type": "bar",
+    "color": "#EEC331",
+    "width": 30,
+    "tooltip": true,
+    "cornerRadius": 2
+  },
+
+  "encoding": {
+    "x": {
+      "field": "Super-Region",
+      "sort": ["North", "Midlands","South"],
+      "type": "nominal",
+      "title": null,
+      "axis": {
+        "tickColor": "#C9CACD",
+        "labelColor": "#FBFBFB",
+        "labelAngle": "90",
+        "labelfont": "Franklin Gothic Book",
+        "labelFontWeight":"lighter",
+        "labelAngle":0,
+        "labelFontSize":12
+      }
+    },
+    "y": {
+      "field": "Median weekly pay, full-time employees (£), 2021 prices (b)",
+      "type": "quantitative",
+      "title": "Median Weekly Earnings, £",
+      "axis": {
+        "tickColor": "#C9CACD",
+        "labelColor": "#FBFBFB",
+        "titleColor": "#FBFBFB",
+        "labelFont": "Franklin Gothic Book",
+        "titlefont": "Franklin Gothic Book",
+        "labelFontWeight":"normal",
+        "titleFontWeight":"normal",
+        "titleFontSize":"13"
+      },
+      "scale": {"domain": [0,700]}
+    }
+  }
+}
