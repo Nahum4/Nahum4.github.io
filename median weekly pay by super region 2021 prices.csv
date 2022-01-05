@@ -1,4 +1,14 @@
-﻿Super-Region,"Median weekly pay, full-time employees (£), 2021 prices (b)"
-North,559.5
-Midlands,572.4
-South,644
+﻿Super-Region,"Median weekly pay, full-time employees (£), 2021 prices (b)",Cost of Living for an individual
+North,559.5,880.2
+Midlands,572.4,908.5
+South,644,1226
+,,
+,,
+Data Notes:,,
+The weekly pay data is calculated as the average of the median weekly pays of each constituent region in each super-region.,,
+The cost of living data is scraped from a MoneyNest table that shows the lowest average monthly spend in different cities. I then sorted these cities into their super-regions and took the average. I did not take the lowest one as my analysis is supposed to look at the super-regions in a more holistic way (not just saying which area is the cheapest to live in). ,,
+,,
+,,
+Data Sources:,,
+Weekly pay: https://commonslibrary.parliament.uk/research-briefings/cbp-8456/,,
+Cost of Living: https://www.moneynest.co.uk/cost-of-living-uk/,,
