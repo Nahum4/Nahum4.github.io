@@ -1,0 +1,81 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Earnings Data from UK Parliament: Average earnings by age and region (November 2021). I downloaded the Excel workbook, extracted the appropriate data and transformed it. Cost of Living data from MoneyNest: Cost of Living analysis 2019. I scraped this data using Python, created a pandas dataframe, exported to CSV and combined with the earnings data. I uploaded this CSV to Github and used the raw link as the data source for this chart. All data sources and workings are linked below this chart.",
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/Nahum4/Nahum4.github.io/main/earnings%20and%20cost%20of%20living%20final%20product.csv"
+  },
+  "title": {
+    "text": "Earnings and Expenditure Across England",
+    "subtitle": "Earnings in Super-Region = Average of Median Weekly Earnings in Consituent Regions",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": "12",
+    "font": "Franklin Gothic Book",
+    "subtitleFont": "Franklin Gothic Book",
+    "fontSize": 15,
+    "fontWeight": "normal",
+    "anchor": "middle",
+    "color": "#FBFBFB",
+    "subtitleColor": "#C9CACD"
+  },
+  "width": 350,
+  "height": 330,
+  "config": {"axis": {"grid": false, "cell": {"strokeWidth": "transparent"}}},
+  "background": "#2F353F",
+  "mark": {
+    "type": "bar",
+    "color": "#EEC331",
+    "width": 30,
+    "tooltip": true,
+    "cornerRadius": 2
+  },
+  "encoding": {
+    "x": {
+      "field": "Category",
+      "title": null,
+      "axis": {
+        "tickColor": "#C9CACD",
+        "labelColor": "#FBFBFB",
+        "labelAngle": 0,
+        "labelfont": "Franklin Gothic Book",
+        "labelFontWeight": "lighter",
+        "labelFontSize": 12
+      }
+    },
+    "y": {
+      "field": "£",
+      "type": "quantitative",
+      "title": "Pounds (£)",
+      "axis": {
+        "tickColor": "#C9CACD",
+        "labelColor": "#FBFBFB",
+        "titleColor": "#FBFBFB",
+        "labelFont": "Franklin Gothic Book",
+        "titlefont": "Franklin Gothic Book",
+        "labelFontWeight": "normal",
+        "titleFontWeight": "normal",
+        "titleFontSize": "13"
+      },
+      "scale": {"domain": [0, 700]}
+    },
+    "xOffset":{
+      "field":"Super-Region",
+      "sort":["North", "Midlands", "South"]
+    },   
+    "color": {
+      "field":"Super-Region",
+      "legend": {
+        "labelColor": "#C9CACD",
+        "titleColor": "#FBFBFB",
+        "labelFont": "Franklin Gothic Book",
+        "titlefont": "Franklin Gothic Book",
+        "labelFontWeight": "lighter",
+        "titleFontWeight": "lighter",
+        "titleFontSize": "11",
+        "labelFontSize": "11"
+      },
+      "scale": {"range":["#EEC331","#BB86FC","#03DAC6"]},      
+      "sort":["North", "Midlands", "South"]
+    }
+  }
+}
