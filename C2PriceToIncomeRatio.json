@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Nahum4/Nahum4.github.io/main/topojson_export.json",
+    "format": {"type": "topojson", "feature": "eer"}
+  },
+
+  "title": {
+    "text": "Regional Property Prices Relative to Income",
+    "subtitle": "Price to Income Ratio = Average House Price/Gross Disposable Household Income",
+    "font": "Franklin Gothic Book",
+    "subtitleFont": "Franklin Gothic Book",
+    "fontSize": 15,
+    "fontWeight":"lighter",
+    "subtitleFontSize": 12,
+    "subtitleFontStyle": "italic",
+    "subtitleFontWeight": "lighter",
+    "anchor": "middle",
+    "color": "#FBFBFB",
+    "subtitleColor": "#C9CACD"
+  },
+
+  "width": 340,
+  "height": 350,
+  "background": "#2F353F",
+
+  "projection": {"type": "naturalEarth1"},
+  "mark": {
+    "type": "geoshape",
+    "tooltip": true  
+  },
+  "encoding": {
+    "color": {
+      "field": "properties.Price To Income Ratio",
+      "type": "quantitative",
+      "legend":{
+        "labelColor": "#C9CACD",
+        "titleColor": "#FBFBFB",
+        "labelFont": "Franklin Gothic Book",
+        "titlefont": "Franklin Gothic Book",
+        "labelFontWeight": "lighter",
+        "titleFontWeight": "lighter",
+        "titleFontSize": "11",
+        "labelFontSize": "11",
+        "title": ["", "", "", "Price to Income Ratio"]        
+      },
+      "scale": {"range": ["#F2ACA6", "#B32619"]}
+      }}
+}
