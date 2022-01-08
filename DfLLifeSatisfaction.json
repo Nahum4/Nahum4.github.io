@@ -1,0 +1,83 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "Life satisfaction data from https://www.ons.gov.uk/peoplepopulationandcommunity/wellbeing/bulletins/measuringnationalwellbeing/april2020tomarch2021. Distance from London data calculated from scraped latitude and longitude data from https://www.latlong.net/category/cities-235-15.html using my scraper: https://colab.research.google.com/drive/1B9K16kBZFyVCV46rmAxLbZJuUC9igTJA?usp=sharing. I matched these locations to those in the ONS dataset using the Excel workbook: ScrapedGeolocation workbook.xlsx, which is uploaded to my Github repository (https://github.com/Nahum4/Nahum4.github.io/blob/main/ScrapedGeolocation%20workbook.xlsx). I tried to use an API to fetch the geolocations but couldn't get the scraper to work - here's my attempt and explanation: https://colab.research.google.com/drive/1ZftoXjvaceaUYSyJsUCGyDeOgJqBaNGZ?usp=sharing. I used seaborn to produce the regression line, as in this notebook https://colab.research.google.com/drive/19epx42WNeGaR3B1w_LAZbWawF_ekH35-?usp=sharing.",
+
+  "width": 350,
+  "height": 310,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Nahum4/Nahum4.github.io/main/DfLLifeSatisfactionRegression.csv"
+  },
+
+  "config": {"axis": {"grid": false, "cell": {"strokeWidth": "transparent"}}},
+
+   "title": {
+    "text": "Life Satisfaction and Distance From London",
+    "subtitle": "Distance Calculated as the Crow Flies. R² ≈ 0.048",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": "12",
+    "font": "Franklin Gothic Book",
+    "subtitleFont": "Franklin Gothic Book",
+    "fontSize": 15,
+    "fontWeight": "normal",
+    "anchor": "middle",
+    "color": "#FBFBFB",
+    "subtitleColor": "#C9CACD"
+  },
+
+  "background": "#2F353F",
+
+  "encoding": {
+    "x": {
+      "field": "Distance from London (km)",
+      "type": "quantitative",
+      "title": "Distance from London (km)",
+      "axis": {
+        "tickColor": "#C9CACD",
+        "labelColor": "#FBFBFB",
+        "labelAngle": 0,
+        "labelfont": "Franklin Gothic Book",
+        "labelFontWeight": "lighter",
+        "labelFontSize": 10,
+        "titleFontSize": 13,
+        "titleFont": "Franklin Gothic Book",
+        "titleColor": "#FBFBFB",
+        "titleFontWeight": "normal"
+        }
+    }
+  },
+  "layer": [
+    {
+      "mark": {"opacity": 1, "strokeWidth": 1.5, "type": "point", "color": "#CBCCCF"},
+      "encoding": {
+        "y": {
+          "field": "Average Life Satisfaction (2017/18)",
+          "type": "quantitative",
+          "scale": {"domain": [0, 10]},
+          "title": "Average Life Satisfaction",
+          "axis": {
+            "tickColor": "#C9CACD",
+            "labelColor": "#FBFBFB",
+            "labelAngle": 0,
+            "labelfont": "Franklin Gothic Book",
+            "labelFontWeight": "lighter",
+            "labelFontSize": 10,
+            "titleFontSize": 13,
+            "titleFont": "Franklin Gothic Book",
+            "titleColor": "#FBFBFB",
+            "titleFontWeight": "normal"
+            }
+        }
+      }
+    },
+    {
+      "mark": {"opacity": 1, "stroke": "#C42B1C", "strokeWidth": 2, "type": "line"},
+      "encoding": {
+        "y": {
+          "field": "Regression Line Points",
+          "type": "quantitative"
+        }
+      }
+    }
+  ]
+}
