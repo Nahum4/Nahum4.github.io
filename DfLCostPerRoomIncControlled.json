@@ -1,0 +1,66 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "House price data from https://www.ons.gov.uk/economy/inflationandpriceindices/datasets/housepricepersquaremetreandhousepriceperroomenglandandwales. I used the same distance from London data (scraped from positionstack's API output using the code in this colab notebook: https://colab.research.google.com/drive/1CSZAcc312FK-2W2MWGD6pohEdzH7V7wj?usp=sharing) as I did in the chart 'Cost of a Habitable Room and Distance From London'. I used this (https://colab.research.google.com/drive/1uo3d7HtZVYBlTvT8iJfbcfzx8fz39Bzb?usp=sharing) notebook to combine and clean the dataets. I then exported to CSV, uploaded to Github and used the raw link in this chart.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Nahum4/Nahum4.github.io/main/CostPerHabIncControlled.csv"
+  },
+  "width": 350,
+  "height": 310,
+  "config": {"axis": {"grid": false, "cell": {"strokeWidth": "transparent"}}},
+  "title": {
+    "text": "Cost of a Habitable Room (Relative to Income) and Distance From London",
+    "subtitle": [
+      "Distance Calculated as the Crow Flies. Data Includes Both Houses and Flats.",
+      "'Income' Refers to Gross Domestic Household Income per Capita."
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": "12",
+    "font": "Franklin Gothic Book",
+    "subtitleFont": "Franklin Gothic Book",
+    "fontSize": 15,
+    "fontWeight": "normal",
+    "anchor": "middle",
+    "color": "#FBFBFB",
+    "subtitleColor": "#C9CACD"
+  },
+  "background": "#2F353F",
+  "mark": {"type": "point", "opacity": 1, "color": "#CBCCCF"},
+  "encoding": {
+    "x": {
+      "field": "Distance From London",
+      "type": "quantitative",
+      "scale": {"domain": [0, 450]},
+      "axis": {
+        "tickColor": "#C9CACD",
+        "labelColor": "#FBFBFB",
+        "labelAngle": 0,
+        "labelfont": "Franklin Gothic Book",
+        "labelFontWeight": "lighter",
+        "labelFontSize": 10,
+        "titleFontSize": 13,
+        "titleFont": "Franklin Gothic Book",
+        "titleColor": "#FBFBFB",
+        "titleFontWeight": "normal",
+        "title": "Distance From London (km)"
+      }
+    },
+    "y": {
+      "field": "Cost per Habitable Room Relative to Income",
+      "type": "quantitative",
+      "scale": {"domain": [0, 13]},
+      "axis": {
+        "tickColor": "#C9CACD",
+        "labelColor": "#FBFBFB",
+        "labelAngle": 0,
+        "labelfont": "Franklin Gothic Book",
+        "labelFontWeight": "lighter",
+        "labelFontSize": 10,
+        "title": "House Price Per Habitable Room Relative to Income (2016)",
+        "titleFontSize": 13,
+        "titleFont": "Franklin Gothic Book",
+        "titleColor": "#FBFBFB",
+        "titleFontWeight": "normal"
+      }
+    }
+  }
+}
