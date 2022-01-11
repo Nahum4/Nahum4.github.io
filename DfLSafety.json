@@ -1,0 +1,84 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "The latitude and longitude data are scraped from PositionStack's API responses and the safety index data are scraped from Numbeo's crime API responses. Both use this colab notebook to scrape: https://colab.research.google.com/drive/1-chpwfbU7TgXDX-fHve2NkgbQ66uUXYX?usp=sharing. Distance from London calculated using the Excel workbook: 'safetyIndexAndGeocodesWorkbook.xlsx' uploaded to my Github. Regression line points calculated using the aforementioned Colab notebook.",
+  "width": 350,
+  "height": 320,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Nahum4/Nahum4.github.io/main/DfLSafetyIndexRegressionForPlotting.csv"
+  },
+  "config": {"axis": {"grid": false, "cell": {"strokeWidth": "transparent"}}},
+  "title": {
+    "text": "Safety and Distance From London",
+    "subtitle": ["Distance Calculated as the Crow Flies. Safety Index is an Average of Numerous", "Safety Metrics (higer = safer). R² ≈ 0.051"],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": "12",
+    "font": "Franklin Gothic Book",
+    "subtitleFont": "Franklin Gothic Book",
+    "fontSize": 15,
+    "fontWeight": "normal",
+    "anchor": "middle",
+    "color": "#FBFBFB",
+    "subtitleColor": "#C9CACD"
+  },
+  "background": "#2F353F",
+  "encoding": {
+    "x": {
+      "field": "Distance from London",
+      "type": "quantitative",
+      "title": "Distance from London (km)",
+      "axis": {
+        "tickColor": "#C9CACD",
+        "labelColor": "#FBFBFB",
+        "labelAngle": 0,
+        "labelfont": "Franklin Gothic Book",
+        "labelFontWeight": "lighter",
+        "labelFontSize": 10,
+        "titleFontSize": 13,
+        "titleFont": "Franklin Gothic Book",
+        "titleColor": "#FBFBFB",
+        "titleFontWeight": "normal"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "opacity": 1,
+        "strokeWidth": 1.5,
+        "type": "point",
+        "color": "#CBCCCF"
+      },
+      "encoding": {
+        "y": {
+          "field": "Safety Index",
+          "type": "quantitative",
+          "scale": {"domain": [0, 100]},
+          "title": "Safety Index",
+          "axis": {
+            "tickColor": "#C9CACD",
+            "labelColor": "#FBFBFB",
+            "labelAngle": 0,
+            "labelfont": "Franklin Gothic Book",
+            "labelFontWeight": "lighter",
+            "labelFontSize": 10,
+            "titleFontSize": 13,
+            "titleFont": "Franklin Gothic Book",
+            "titleColor": "#FBFBFB",
+            "titleFontWeight": "normal"
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "opacity": 1,
+        "stroke": "#C42B1C",
+        "strokeWidth": 2,
+        "type": "line"
+      },
+      "encoding": {
+        "y": {"field": "Regression Line Points", "type": "quantitative"}
+      }
+    }
+  ]
+}
