@@ -31,7 +31,7 @@
     "x": {
       "field": "Distance from London (km)",
       "type": "quantitative",
-      "title": "Distance from London (km)",
+      "title": "Distance From London (km)",
       "axis": {
         "tickColor": "#C9CACD",
         "labelColor": "#FBFBFB",
@@ -54,7 +54,7 @@
           "field": "Average Life Satisfaction (2017/18)",
           "type": "quantitative",
           "scale": {"domain": [0, 10]},
-          "title": "Average Life Satisfaction",
+          "title": "Average Life Satisfaction, 2017/18",
           "axis": {
             "tickColor": "#C9CACD",
             "labelColor": "#FBFBFB",
