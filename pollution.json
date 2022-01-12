@@ -56,7 +56,8 @@
         "titlefont": "Franklin Gothic Book",
         "labelFontWeight": "normal",
         "titleFontWeight": "normal",
-        "titleFontSize": "13"
+        "titleFontSize": "13",
+        "title": "Average Pollution Index, 2021"
       }
       },
 
