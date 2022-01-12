@@ -10,7 +10,7 @@
  "config": {"axis": {"grid": false, "cell": {"strokeWidth": "transparent"}}},
   "title": {
     "text": "Cost of a Habitable Room and Distance From London",
-    "subtitle": ["Distance Calculated as the Crow Flies. Data Includes Both Houses and Flats.", "'Habitable' Excludes Kitchens, Bathrooms and Conservatories."],
+    "subtitle": ["Distance Calculated as the Crow Flies. Data Includes Houses and Flats.", "'Habitable' Excludes Kitchens, Bathrooms and Conservatories."],
     "subtitleFontStyle": "italic",
     "subtitleFontSize": "12",
     "font": "Franklin Gothic Book",
@@ -58,7 +58,7 @@
             "labelfont": "Franklin Gothic Book",
             "labelFontWeight": "lighter",
             "labelFontSize": 10,
-            "title": "House Price Per Habitable Room (2016)",
+            "title": "House Price Per Habitable Room, 2016",
             "titleFontSize": 13,
             "titleFont": "Franklin Gothic Book",
             "titleColor": "#FBFBFB",
