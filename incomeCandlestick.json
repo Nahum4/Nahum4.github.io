@@ -1,0 +1,102 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  "description": "Data downloaded from https://www.ons.gov.uk/filter-outputs/1b6088e6-fb6b-4377-93a1-2c02e1d53e85. I downloaded it, reorganised it and uploaded to Github.",
+
+  "data": {"url": "https://raw.githubusercontent.com/Nahum4/Nahum4.github.io/main/IncomeDataForPlotting.csv"},
+
+"title": {
+    "text": "Income Percentiles by English Region",
+    "subtitle": ["In Decending order, the Marks on Each Candlestick are:","90th Percentile, 75th Percentile, 25th Percentile, 10th Percentile"],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": "12",
+    "font": "Franklin Gothic Book",
+    "subtitleFont": "Franklin Gothic Book",
+    "fontSize": 15,
+    "fontWeight": "normal",
+    "anchor": "middle",
+    "color": "#FBFBFB",
+    "subtitleColor": "#C9CACD"
+  },
+  "width": 330,
+  "height": 330,
+  "config": {"axis": {"grid": false, "cell": {"strokeWidth": "transparent"}}},
+  "background": "#2F353F",
+
+  "encoding": {
+    "x": {
+      "field": "Region",
+      "type": "nominal",
+      "title": null,
+      "sort": ["North", "Midlands", "South"],
+      "axis": {
+        "tickColor": "#C9CACD",
+        "labelColor": "#FBFBFB",
+        "labelAngle": -30,
+        "labelfont": "Franklin Gothic Book",
+        "labelFontWeight": "lighter",
+        "labelFontSize": 12
+      }
+    },
+    "y": {
+      "type": "quantitative",
+      "axis": {
+        "tickColor": "#C9CACD",
+        "labelColor": "#FBFBFB",
+        "titleColor": "#FBFBFB",
+        "labelFont": "Franklin Gothic Book",
+        "titlefont": "Franklin Gothic Book",
+        "labelFontWeight": "normal",
+        "titleFontWeight": "normal",
+        "titleFontSize": "13",
+        "title":"Gross Earnings (£), 2016"
+      }
+    },
+    "color": {
+      "field": "Super-Region",
+      "scale": {"range": ["#EEC331", "#BB86FC", "#03DAC6"]},
+      "sort": ["North", "Midlands", "South"],
+      "legend": {
+        "labelColor": "#FBFBFB",
+        "titleColor": "#FBFBFB",
+        "labelFont": "Franklin Gothic Book",
+        "titlefont": "Franklin Gothic Book",
+        "labelFontWeight": "lighter",
+        "titleFontWeight": "lighter",
+        "titleFontSize": "11",
+        "labelFontSize": "12",
+        "title": null,
+        "orient": "none",
+        "legendX": 90,
+        "legendY": -20,
+        "direction": "horizontal"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "width": 1.7,
+        "tooltip": true
+      },
+      "encoding": {
+        "y": {"field": "10th Percentile"},
+        "y2": {"field": "90th Percentile"}
+      }
+    },
+    {
+      "mark": {
+        "type": "bar",
+        "tooltip": true,
+        "cornerRadius":1,
+        "width": 10
+      },
+      "encoding": {
+        "y": {"field": "25th Percentile"},
+        "y2": {"field": "75th Percentile"}
+      }
+    }
+  ]
+}
+
