@@ -1,0 +1,10 @@
+﻿Region,Super-Region,10th Percentile,25th Percentile,75th Percentile,90th Percentile,Mean,Median
+North East,North,7451,13515,31314,42512,24541,21177
+North West,North,7200,13442,32876,45724,25757,21664
+Yorkshire and The Humber,North,7091,12976,31802,43400,24439,21215
+East Midlands,Midlands,7298,13397,31739,44149,24895,21122
+West Midlands,Midlands,7205,13364,32787,45522,25718,21732
+East of England,South,6515,12981,34110,48636,26428,22330
+London,South,9385,19186,47735,74766,41111,31357
+South East,South,7620,14760,37015,53831,29534,24514
+South West,South,6442,12855,31786,44895,24917,21295
