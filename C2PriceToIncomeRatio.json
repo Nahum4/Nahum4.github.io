@@ -2,19 +2,16 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
     "url": "https://raw.githubusercontent.com/Nahum4/Nahum4.github.io/main/topojson_export.json",
-
-  "description": "Average property price data scraped from https://www.gov.uk/government/news/uk-house-price-index-for-december-2019 using a scraper I built: https://colab.research.google.com/drive/1KdVxsbPt8qM6nPXVhv9hjnrZZY-crRSa?usp=sharing. Gross disposable household income per capita data from https://www.ons.gov.uk/economy/regionalaccounts/grossdisposablehouseholdincome/datasets/regionalgrossdisposablehouseholdincomegdhi. I combined the datasets after scraping, calculated the price to income ratio, saved as a CSV, uploaded to GitHub then used that to attach the price to income ratio to a topojson file which can be found here https://martinjc.github.io/UK-GeoJSON/json/eng/topo_eer.json. The steps I took are in this notebook: https://colab.research.google.com/drive/1kY1AZP26J5CZQ5BRKi6VAhnWvNOoYv_t?usp=sharing",
-
+    "description": "Average property price data scraped from https://www.gov.uk/government/news/uk-house-price-index-for-december-2019 using a scraper I built: https://colab.research.google.com/drive/1KdVxsbPt8qM6nPXVhv9hjnrZZY-crRSa?usp=sharing. Gross disposable household income per capita data from https://www.ons.gov.uk/economy/regionalaccounts/grossdisposablehouseholdincome/datasets/regionalgrossdisposablehouseholdincomegdhi. I combined the datasets after scraping, calculated the price to income ratio, saved as a CSV, uploaded to GitHub then used that to attach the price to income ratio to a topojson file which can be found here https://martinjc.github.io/UK-GeoJSON/json/eng/topo_eer.json. The steps I took are in this notebook: https://colab.research.google.com/drive/1kY1AZP26J5CZQ5BRKi6VAhnWvNOoYv_t?usp=sharing",
     "format": {"type": "topojson", "feature": "eer"}
   },
-
   "title": {
     "text": "Regional Property Prices Relative to Income",
-    "subtitle": "Price to Income Ratio = Average House Price/Gross Disposable Household Income",
+    "subtitle": ["Price to Income Ratio = How Many Years Worth of Average Gross Income", "Needed to Buy the Average House in the Area Outright"],
     "font": "Franklin Gothic Book",
     "subtitleFont": "Franklin Gothic Book",
     "fontSize": 15,
-    "fontWeight":"lighter",
+    "fontWeight": "lighter",
     "subtitleFontSize": 12,
     "subtitleFontStyle": "italic",
     "subtitleFontWeight": "lighter",
@@ -22,21 +19,16 @@
     "color": "#FBFBFB",
     "subtitleColor": "#C9CACD"
   },
-
-  "width": 340,
+  "width": 400,
   "height": 350,
   "background": "#2F353F",
-
   "projection": {"type": "naturalEarth1"},
-  "mark": {
-    "type": "geoshape",
-    "tooltip": true  
-  },
+  "mark": {"type": "geoshape", "tooltip": true},
   "encoding": {
     "color": {
       "field": "properties.Price To Income Ratio",
       "type": "quantitative",
-      "legend":{
+      "legend": {
         "labelColor": "#C9CACD",
         "titleColor": "#FBFBFB",
         "labelFont": "Franklin Gothic Book",
@@ -45,8 +37,13 @@
         "titleFontWeight": "lighter",
         "titleFontSize": "11",
         "labelFontSize": "11",
-        "title": ["", "", "", "Price to Income Ratio"]        
+        "title": ["Price to Income Ratio"],
+        "orient": "none",
+        "legendX":168,
+        "legendY":330,
+        "direction": "horizontal"
       },
       "scale": {"range": ["#F2ACA6", "#B32619"]}
-      }}
+    }
+  }
 }
