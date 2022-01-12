@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "The latitude and longitude data are scraped from PositionStack's API responses and the safety index data are scraped from Numbeo's crime API responses. Both use this colab notebook to scrape: https://colab.research.google.com/drive/1-chpwfbU7TgXDX-fHve2NkgbQ66uUXYX?usp=sharing. Distance from London calculated using the Excel workbook: 'safetyIndexAndGeocodesWorkbook.xlsx' uploaded to my Github. Regression line points calculated using the aforementioned Colab notebook.",
+  "description": "The latitude and longitude data (for distance from London calculations) are scraped from PositionStack's API responses and the safety index data are scraped from Numbeo's crime API responses. Both use this colab notebook to scrape: https://colab.research.google.com/drive/1-chpwfbU7TgXDX-fHve2NkgbQ66uUXYX?usp=sharing. Distance from London calculated using the Excel workbook: 'safetyIndexAndGeocodesWorkbook.xlsx' uploaded to my Github. Regression line points calculated using the aforementioned Colab notebook.",
   "width": 350,
   "height": 320,
   "data": {
@@ -9,7 +9,10 @@
   "config": {"axis": {"grid": false, "cell": {"strokeWidth": "transparent"}}},
   "title": {
     "text": "Safety and Distance From London",
-    "subtitle": ["Distance Calculated as the Crow Flies. Safety Index is an Average of Numerous", "Safety Metrics (higer = safer). R² ≈ 0.051"],
+    "subtitle": [
+      "Distance Calculated as the Crow Flies. Safety Index is an Average of Numerous",
+      "Safety Metrics (Higher = Safer). R² ≈ 0.051"
+    ],
     "subtitleFontStyle": "italic",
     "subtitleFontSize": "12",
     "font": "Franklin Gothic Book",
@@ -53,7 +56,7 @@
           "field": "Safety Index",
           "type": "quantitative",
           "scale": {"domain": [0, 100]},
-          "title": "Safety Index",
+          "title": "Safety Index, 2016",
           "axis": {
             "tickColor": "#C9CACD",
             "labelColor": "#FBFBFB",
