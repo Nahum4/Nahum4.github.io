@@ -30,8 +30,8 @@
     <h1>Nahum Locke</h1>
     <h1>Data Science 2021.</h1>
 
-    <p>This is my portfolio page. The charts on this page use a variety of data science techniques in their creation or the data they use. Some charts here may also appear in my <a class="textLink" href="Project.html">project page</a>.</p>
-    <p>I have created these charts over the course of 6 weeks as I learnt the necessary skills, as such the colour schemes are quite inconsistent. See my project page for a more visually pleasing demonstration of my skills.</p>
+    <p>This is my portfolio page. The charts on this page use a variety of data science techniques in their creation or the data they use. Some charts here may also appear in my <a class="textLink" href="Project.html">project page</a>. This site in itself is apart of my portfolio - I built this site using a variety of html, json and JavaScript code.</p>
+    <p>I have created these charts over the course of 6 weeks as I learnt the necessary skills, as such the colour schemes and layout are quite inconsistent. See my project page for a more visually pleasing demonstration of my skills.</p>
     <p>Click <a class="textLink" href="index.html">here</a> to return to the homepage.</p>
    
 
@@ -99,7 +99,7 @@ vegaEmbed('#fourthChart', myChart4);
 
 </div>
     
-<p>My fifth chart looks at the number of new people who are fully vaccinated in the same three regions of the UK. To get the data for this chart I edited the URL of the API used in my fourth chart. I downloaded the data, uploaded it to Github and used that as the chart's data source. Because of this, this chart will load faster than chart 4, but won't stay up to date.</p>
+<p>My fifth chart looks at the number of new people who are fully vaccinated in the same three regions of the UK. To get the data for this chart I edited the URL of the API used in my fourth chart. I downloaded the data, uploaded it to Github and used the raw link as this chart's data source. Because I have used the raw link this chart will load faster than chart 4, but won't stay up to date.</p>
 
 <div class="wrap">
 <p class="rubric-launch">To see the data in this chart, click <a class="textLink" href="myCovidData.csv"> here</a>.</p> 
@@ -175,7 +175,7 @@ vegaEmbed('#ninthChart', myChart9);
 
 <h3>Python Fetch/Loops</h3>
   <p>The following 4 charts show the average price of a draught pint of lager in different cities.</p>
-<p>I downloaded the data for these charts by using fetch in Python, writing a loop to make 4 separate calls to the Numbeo cost of living API.</p>
+<p>I downloaded the data for these charts by using fetch in Python, writing a loop that makes 4 separate calls to the Numbeo cost of living API and batch downloads the data.</p>
 
 
 <div class="chart" id="tenthChart">
@@ -231,7 +231,7 @@ vegaEmbed('#fourteenthChart', myChart14);
 
 </div>
 
-    <!--Homework 8-->
+    <!--Homework 7.5 (this was homework 8 but since the homework tasks are inconsistent in the lecture slides, the labs and the coursework brief I'm still including it. I also think it's a good addition to my portfolio (it's useful for employers to see that I can tell a story using data).-->
 
 <h3>Data Stories</h3>
 
@@ -245,17 +245,30 @@ vegaEmbed('#fifthteenthChart', myChart15);
 
 </div>
 
+
+<!--Homework 8-->
+<h3>Merging Data.</h3>
+    <p>This chart uses multiple data sources. I scraped geolocation data from Numbeo's API and plotted it against life satisfaction data from the ONS in a scatter plot. I then used Seaborn (a package I imported into Google Colab) to plot a regression line between the two, used Scimpy to find the regression parameters and took that into vega to plot as a multi-layered chart.</p>
+    
+   <div class="chart" id="sixthteenthChart">
+<script>
+var myChart16 = "DfLLifeSatisfaction.json";
+vegaEmbed('#sixthteenthChart', myChart16);
+</script>
+
+</div>
+
 <!--Homework 9-->
 
 <div>
     
     <h3>Advanced Analytics</h3>
-    <p>To come: build a chart using an advanced analytic technique from any data source.</p>
+    <p>To come - build and embed a chart that uses advanced statistical methods, testing causality or distribution.</p>
     
-   <div class="chart" id="sixthteenthChart">
+   <div class="chart" id="eighteenthChart">
 <script>
-var myChart16 = "insert url here";
-vegaEmbed('#sixthteenthChart', myChart16);
+var myChart178= "insert chart url here";
+vegaEmbed('#eighteenthChart', myChart18);
 </script>
 
 </div>
