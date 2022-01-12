@@ -1,0 +1,84 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple bar chart with rounded corners at the end of the bar.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Nahum4/Nahum4.github.io/main/pollutionByRegionAndSuperRegion2.csv"
+  },
+
+  "title": {
+    "text": "Pollution Index Across England",
+    "subtitle": ["Pollution Index Determined By light, noise, air and water pollution,","greenspace, garbage disposal satisfaction and city cleanliness"],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": "12",
+    "font": "Franklin Gothic Book",
+    "subtitleFont": "Franklin Gothic Book",
+    "fontSize": 15,
+    "fontWeight": "normal",
+    "anchor": "middle",
+    "color": "#FBFBFB",
+    "subtitleColor": "#C9CACD"
+  },
+  "width": 350,
+  "height": 330,
+  "config": {"axis": {"grid": false, "cell": {"strokeWidth": "transparent"}}},
+  "background": "#2F353F",
+  "mark": {
+    "type": "bar",
+    "color": "#EEC331",
+    "width": 25,
+    "tooltip": true,
+    "cornerRadius": 2
+  },
+
+  "encoding": {
+    "x": {
+      "field": "Region",
+      "type": "nominal",
+      "sort": [],
+      "axis": {
+        "tickColor": "#C9CACD",
+        "labelColor": "#FBFBFB",
+        "labelAngle": 90,
+        "labelfont": "Franklin Gothic Book",
+        "labelFontWeight": "lighter",
+        "labelFontSize": 12,
+        "title":null
+       }
+      },
+    "y": {
+      "field": "Average Pollution Index",
+      "type": "quantitative",
+      "axis": {
+        "tickColor": "#C9CACD",
+        "labelColor": "#FBFBFB",
+        "titleColor": "#FBFBFB",
+        "labelFont": "Franklin Gothic Book",
+        "titlefont": "Franklin Gothic Book",
+        "labelFontWeight": "normal",
+        "titleFontWeight": "normal",
+        "titleFontSize": "13"
+      }
+      },
+
+    "color": {
+      "field": "Super-Region",
+      "legend": {
+        "labelColor": "#FBFBFB",
+        "titleColor": "#FBFBFB",
+        "labelFont": "Franklin Gothic Book",
+        "titlefont": "Franklin Gothic Book",
+        "title":null,
+        "labelFontWeight": "lighter",
+        "titleFontWeight": "lighter",
+        "titleFontSize": "11",
+        "labelFontSize": "12",
+        "orient": "none",
+        "direction": "horizontal",
+        "legendX":95,
+        "legendY":-20
+      },
+      "scale": {"range": ["#EEC331", "#BB86FC", "#03DAC6"]},
+      "sort": ["North", "Midlands", "South"]
+    }
+  }
+}
