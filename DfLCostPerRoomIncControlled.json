@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "House price data from https://www.ons.gov.uk/economy/inflationandpriceindices/datasets/housepricepersquaremetreandhousepriceperroomenglandandwales. I used the same distance from London data (scraped from positionstack's API output using the code in this colab notebook: https://colab.research.google.com/drive/1CSZAcc312FK-2W2MWGD6pohEdzH7V7wj?usp=sharing) as I did in the chart 'Cost of a Habitable Room and Distance From London'. I used this (https://colab.research.google.com/drive/1uo3d7HtZVYBlTvT8iJfbcfzx8fz39Bzb?usp=sharing) notebook to combine and clean the dataets. I then exported to CSV, uploaded to Github and used the raw link in this chart.",
+  "description": "House price data from https://www.ons.gov.uk/economy/inflationandpriceindices/datasets/housepricepersquaremetreandhousepriceperroomenglandandwales. I used the same distance from London data (scraped from positionstack's API output using the code in this colab notebook: https://colab.research.google.com/drive/1CSZAcc312FK-2W2MWGD6pohEdzH7V7wj?usp=sharing) as I did in the chart 'Cost of a Habitable Room and Distance From London'. I used this (https://colab.research.google.com/drive/1uo3d7HtZVYBlTvT8iJfbcfzx8fz39Bzb?usp=sharing) notebook to combine and clean the dataets and calculate the cost to income ratio. I then exported to CSV, uploaded to Github and used the raw link in this chart.",
   "data": {
     "url": "https://raw.githubusercontent.com/Nahum4/Nahum4.github.io/main/CostPerHabIncControlled.csv"
   },
