@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/Nahum4/Nahum4.github.io/main/nba_heights.csv"},
+  "title": {
+    "text": "Distribution of NBA Player Heights, 2008",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": "12",
+    "font": "Franklin Gothic Book",
+    "subtitleFont": "Franklin Gothic Book",
+    "fontSize": 15,
+    "fontWeight": "normal",
+    "anchor": "middle",
+    "color": "#FBFBFB",
+    "subtitleColor": "#C9CACD"
+  },
+  "width": 330,
+  "height": 330,
+  "config": {"axis": {"grid": false, "cell": {"strokeWidth": "transparent"}}},
+
+  "background": "#2F353F",
+
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Height (m)",
+      "axis":{
+        "title":"Height (m)",
+        "tickColor": "#C9CACD",
+        "labelColor": "#FBFBFB",
+        "labelAngle": -45,
+        "labelfont": "Franklin Gothic Book",
+        "labelFontWeight": "lighter",
+        "labelFontSize": 12,
+        "titleColor": "#FBFBFB",
+        "titleFontWeight":"lighter",
+        "titleFontSize":13
+      }
+    },
+    "y": {
+      "aggregate": "count",
+      "axis":{
+        "title":"Number of Players",
+        "tickColor": "#C9CACD",
+        "labelColor": "#FBFBFB",
+        "titleColor": "#FBFBFB",
+        "labelFont": "Franklin Gothic Book",
+        "titlefont": "Franklin Gothic Book",
+        "labelFontWeight": "normal",
+        "titleFontWeight": "normal",
+        "titleFontSize": "13"
+      }
+      }
+  }
+}
