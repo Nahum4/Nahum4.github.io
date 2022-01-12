@@ -6,8 +6,8 @@
   },
 
   "title": {
-    "text": "Pollution Index Across England",
-    "subtitle": ["Pollution Index Determined By light, noise, air and water pollution,","greenspace, garbage disposal satisfaction and city cleanliness"],
+    "text": "Numbeo Pollution Index by English Region",
+    "subtitle": ["Pollution Index Determined by Light, Noise, Air and Water pollution,","Greenspace, Garbage Disposal Satisfaction and City Cleanliness"],
     "subtitleFontStyle": "italic",
     "subtitleFontSize": "12",
     "font": "Franklin Gothic Book",
