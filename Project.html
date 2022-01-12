@@ -50,44 +50,57 @@ vegaEmbed('#projectChart2', myProjectChart2);
 </script>
 
 </div>
-    
-    <h3>A little later on...</h3>
-    <p>It seems as though what really matters is distance from London. However, some important metrics like life satisfaction (and whatever else) do not change much as you leave the capital.</p>
-      
-    <div class="chart" id="projectChart4">
+
+    <p>Chart on distance from London and cost per room</p>
+        <div class="chart" id="projectChart3">
 <script>
-var myProjectChart4 = "DfLLifeSatisfaction.json";
+var myProjectChart3 = "DfLCostPerRoom.json";
+vegaEmbed('#projectChart3', myProjectChart3);
+</script>
+
+</div>
+    
+     <p>Chart on distance from London and cost per room/income controlled.</p>
+        <div class="chart" id="projectChart4">
+<script>
+var myProjectChart4 = "DfLCostPerRoomIncControlled.json";
 vegaEmbed('#projectChart4', myProjectChart4);
 </script>
 
 </div>
     
-    <p>Chart on distance from London and cost per room</p>
+
+      <p>Candlestick chart on income percentiles across England.</p>
         <div class="chart" id="projectChart5">
 <script>
-var myProjectChart5 = "DfLCostPerRoom.json";
+var myProjectChart5 = "incomeCandlestick.json";
 vegaEmbed('#projectChart5', myProjectChart5);
 </script>
 
 </div>
-   
-     <p>Chart on distance from London and safety index.</p>
-        <div class="chart" id="projectChart6">
+    
+    
+    <h3>A little later on...</h3>
+    <p>It seems as though what really matters is distance from London. However, some important metrics like life satisfaction (and whatever else) do not change much as you leave the capital.</p>
+      
+    <div class="chart" id="projectChart6">
 <script>
-var myProjectChart6 = "DfLSafety.json";
+var myProjectChart6 = "DfLLifeSatisfaction.json";
 vegaEmbed('#projectChart6', myProjectChart6);
 </script>
 
 </div>
-  
+    
+       
      <p>Chart on distance from London and safety index.</p>
         <div class="chart" id="projectChart7">
 <script>
-var myProjectChart7 = "DfLCostPerRoomIncControlled.json";
+var myProjectChart7 = "DfLSafety.json";
 vegaEmbed('#projectChart7', myProjectChart7);
 </script>
 
 </div>
+ 
     
     
      <p>Chart on pollution by region.</p>
@@ -99,14 +112,6 @@ vegaEmbed('#projectChart8', myProjectChart8);
 
 </div>
   
-     <p>Candlestick chart on income percentiles across England.</p>
-        <div class="chart" id="projectChart9">
-<script>
-var myProjectChart9 = "incomeCandlestick.json";
-vegaEmbed('#projectChart9', myProjectChart9);
-</script>
-
-</div>
     
     <br>
     <br>
