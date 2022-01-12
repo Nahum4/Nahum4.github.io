@@ -8,9 +8,9 @@
   "height": 310,
   "config": {"axis": {"grid": false, "cell": {"strokeWidth": "transparent"}}},
   "title": {
-    "text": "Cost of a Habitable Room (Relative to Income) and Distance From London",
+    "text": "Income Relative Room Costs and Distance From London",
     "subtitle": [
-      "Distance Calculated as the Crow Flies. Data Includes Both Houses and Flats.",
+      "Distance Calculated as the Crow Flies. Data Includes Houses and Flats.",
       "'Income' Refers to Gross Domestic Household Income per Capita."
     ],
     "subtitleFontStyle": "italic",
@@ -55,7 +55,7 @@
         "labelfont": "Franklin Gothic Book",
         "labelFontWeight": "lighter",
         "labelFontSize": 10,
-        "title": "House Price Per Habitable Room Relative to Income (2016)",
+        "title": "House Price Per Habitable Room Relative to Income, 2016",
         "titleFontSize": 13,
         "titleFont": "Franklin Gothic Book",
         "titleColor": "#FBFBFB",
