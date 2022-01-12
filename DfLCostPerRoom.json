@@ -5,7 +5,7 @@
 
   "data": {"url": "https://raw.githubusercontent.com/Nahum4/Nahum4.github.io/main/HPbyInhabitableRoom%26GeocodesForPlotting.csv"},
 
-  "width":350,
+  "width":330,
   "height":310,
  "config": {"axis": {"grid": false, "cell": {"strokeWidth": "transparent"}}},
   "title": {
