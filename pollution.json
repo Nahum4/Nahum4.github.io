@@ -1,13 +1,15 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A simple bar chart with rounded corners at the end of the bar.",
+  "description": "City list and associated region scraped from https://en.wikipedia.org/wiki/List_of_cities_in_the_United_Kingdom. The data was very messy, I cleaned it after scraping in this colab notebook: https://colab.research.google.com/drive/1VX1_I3sn9OdJOFgLGj_wBSsN7yN-3f_7?usp=sharing. I then formatted in a way which was consistent with Numbeo's API responses and made a looped call to the API, scraping the output for pollution data. I tidied this (in Colab notebook) and exported to CSV, uploaded to Github and used the raw link in this chart.",
   "data": {
     "url": "https://raw.githubusercontent.com/Nahum4/Nahum4.github.io/main/pollutionByRegionAndSuperRegion2.csv"
   },
-
   "title": {
     "text": "Numbeo Pollution Index by English Region",
-    "subtitle": ["Pollution Index Determined by Light, Noise, Air and Water pollution,","Greenspace, Garbage Disposal Satisfaction and City Cleanliness"],
+    "subtitle": [
+      "Pollution Index Determined by Light, Noise, Air and Water pollution,",
+      "Greenspace, Garbage Disposal Satisfaction and City Cleanliness"
+    ],
     "subtitleFontStyle": "italic",
     "subtitleFontSize": "12",
     "font": "Franklin Gothic Book",
@@ -29,7 +31,6 @@
     "tooltip": true,
     "cornerRadius": 2
   },
-
   "encoding": {
     "x": {
       "field": "Region",
@@ -42,9 +43,9 @@
         "labelfont": "Franklin Gothic Book",
         "labelFontWeight": "lighter",
         "labelFontSize": 12,
-        "title":null
-       }
-      },
+        "title": null
+      }
+    },
     "y": {
       "field": "Average Pollution Index",
       "type": "quantitative",
@@ -59,8 +60,7 @@
         "titleFontSize": "13",
         "title": "Average Pollution Index, 2021"
       }
-      },
-
+    },
     "color": {
       "field": "Super-Region",
       "legend": {
@@ -68,15 +68,15 @@
         "titleColor": "#FBFBFB",
         "labelFont": "Franklin Gothic Book",
         "titlefont": "Franklin Gothic Book",
-        "title":null,
+        "title": null,
         "labelFontWeight": "lighter",
         "titleFontWeight": "lighter",
         "titleFontSize": "11",
         "labelFontSize": "12",
         "orient": "none",
         "direction": "horizontal",
-        "legendX":95,
-        "legendY":-20
+        "legendX": 95,
+        "legendY": -20
       },
       "scale": {"range": ["#EEC331", "#BB86FC", "#03DAC6"]},
       "sort": ["North", "Midlands", "South"]
