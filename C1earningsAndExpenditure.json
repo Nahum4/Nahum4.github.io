@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Earnings Data from UK Parliament: Average earnings by age and region (November 2021). I downloaded the Excel workbook, extracted the appropriate data and transformed it. Cost of Living data from MoneyNest: Cost of Living analysis 2019. I scraped this data using Python, created a pandas dataframe, exported to CSV and combined with the earnings data. I uploaded this CSV to Github and used the raw link as the data source for this chart. All data sources and workings are linked below this chart.",
+  "description": "Earnings Data downloaded from https://commonslibrary.parliament.uk/research-briefings/cbp-8456/. I downloaded the Excel workbook, extracted the appropriate data and transformed it - my workings are in the Excel workbook 'Chart 1 working booklet.xlsx' uploaded to my Github. I scraped the Cost of Living data from https://www.moneynest.co.uk/cost-of-living-uk/ using this colab notebook: https://colab.research.google.com/drive/1xJP4_LRwYs3JdxQ2tGthlRbBYsejHJUS?usp=sharing. After combining the data, I uploaded this CSV to Github and used the raw link as the data source for this chart.",
   "data": {
     "url": "https://raw.githubusercontent.com/Nahum4/Nahum4.github.io/main/earnings%20and%20cost%20of%20living%20final%20product.csv"
   },
@@ -72,10 +72,10 @@
         "titleFontWeight": "lighter",
         "titleFontSize": "11",
         "labelFontSize": "12",
-        "title":null,
+        "title": null,
         "orient": "none",
-        "legendX":90,
-        "legendY":-20,
+        "legendX": 90,
+        "legendY": -20,
         "direction": "horizontal"
       },
       "scale": {"range": ["#EEC331", "#BB86FC", "#03DAC6"]},
