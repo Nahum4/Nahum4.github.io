@@ -248,7 +248,7 @@ vegaEmbed('#fifthteenthChart', myChart15);
 
 <!--Homework 8-->
 <h3>Merging Data.</h3>
-    <p>This chart uses multiple data sources. I scraped geolocation data from Numbeo's API and plotted it against life satisfaction data from the ONS in a scatter plot. I then used Seaborn (a package I imported into Google Colab) to plot a regression line between the two, used Scimpy to find the regression parameters and took that into vega to plot as a multi-layered chart.</p>
+    <p>This chart uses multiple data sources. I scraped geolocation data from a latitude and longitude table, calculated the distance from London of each point, joined it with life satisfaction data from the ONS in a Colab Notebook and plotted the two against each other in a scatter plot. I then used Seaborn (a package I imported into Google Colab) to plot a regression line between the two, used Scimpy to find the regression parameters and took that into vega to plot as a multi-layered chart. I tried to use PositionStack's API to scrape geolocation data but failed to realise that I was scraping JSON output using BeautifulSoup (a HTML scraping tool). See the colab notebook referenced in this charts vega-specification for the solution I later found.</p>
     
    <div class="chart" id="sixthteenthChart">
 <script>
