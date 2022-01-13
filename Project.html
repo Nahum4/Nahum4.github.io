@@ -25,13 +25,19 @@
     <br>
     <img src="https://raw.githubusercontent.com/Nahum4/Nahum4.github.io/main/england%20pic%203.png" alt="outLineOfEnglandFailedToLoad">
     
-    <h1>The North South Divide</h1>
+    <h1>The North-South Divide</h1>
+    <h1>- Housing -</h1>
     
-    <h2>Rubric - one sentence description of project/question</h2>
-
+    <h2>Is quality housing relatively cheaper in the North of England?/h2>
+     
+    <p>It’s no secret that the South of England performs better than the North in terms of incomes and jobs. But with house prices soaring, does this prosperity actually make it relatively cheaper to live well in the South?</p)
+    <p>This project will evaluate the cost of quality housing across England. Although my initial aim was to produce a holistic view of the relative costs of living well across England, to give a more in-depth analysis I instead focused my evaluation on one large component of living well – house prices and quality. For my data sources and methodology check each chart’s vega-specification. </p> 
+        
+        
     <h3>Motivation</h3>
-    <p>Chart showing earnings for super-regions - note, need to change title to reflect the fact that the super-region 'median weekly earnings' is an average of the median weekly earnings in the constituent regions that make the super-regions up.</p>
-    <p>Earnings data from <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-8456/">UK Parliament</a> and cost of living data scraped from <a href="https://www.moneynest.co.uk/cost-of-living-uk/">MoneyNest</a> using <a href="https://colab.research.google.com/drive/1xJP4_LRwYs3JdxQ2tGthlRbBYsejHJUS?usp=sharing">this code</a>. I used <a class="textLink" href="Chart 1 working booklet.xlsx">this excel workbook</a> to transform the data.</p>
+    
+    <p>Chart 1 shows my motivation for this project. Whilst the South enjoys greater earnings than the rest of England, it suffers significantly greater costs of living. I wondered, does the former compensate the latter?</p>
+    <p>Scraping the living cost data proved difficult at first as the data were not in a table. Fortunately, since the data were in another HTML element, I was able to modify my scraper to collect and trim the relevant data.</p>
     
     <div class="chart" id="projectChart1">
 <script>
@@ -40,8 +46,10 @@ vegaEmbed('#projectChart1', myProjectChart1);
 </script>
 
 </div>
+
     
-    <p>Some text here, something like "So what about if we control for incomes? Well, the same story appears..."</p>
+    <h3>The Cost of Housing</h3>    
+    <p>My next chart represents house prices as a ratio to income. Even relative to incomes, the cost of buying a house is greater in the South than in the North. The difference is significant – the price to income ratio in London is over double that in the North East. In other words, an individual earning an average salary in the North East would have to work for half as long as someone in London would to buy an average house in the area. I chose to display this data on a choropleth to illustrate how housing inequality may not differ simply by the discrete North-South Divide, but rather by a continuous scale of inequality derived from the distance from London.</p>
        
     <div class="chart" id="projectChart2">
 <script>
@@ -51,8 +59,11 @@ vegaEmbed('#projectChart2', myProjectChart2);
 
 </div>
 
-    <p>Chart on distance from London and cost per room</p>
-        <div class="chart" id="projectChart3">
+    
+    <h3>House Quality</h3>
+    <p>Whilst house prices <em>are</em> relatively cheaper the further outside London they are, it may also be that they are inferior. To investigate this, I contacted UBDC to arrange a contract with Zoopla to use their property API which contains numerous metrics related to house quality. However, Zoopla took too long to draw up their side of the contract, meaning I had to use inferior data. The first metric I consider is the cost of a habitable room compared to the distance from London. A clear pattern emerges – room costs increase at an exponential rate as the house nears England’s capital.</p>
+        
+    <div class="chart" id="projectChart3">
 <script>
 var myProjectChart3 = "DfLCostPerRoom.json";
 vegaEmbed('#projectChart3', myProjectChart3);
@@ -60,7 +71,9 @@ vegaEmbed('#projectChart3', myProjectChart3);
 
 </div>
     
-     <p>Chart on distance from London and cost per room/income controlled.</p>
+     <p>After controlling for incomes to bring it into relative terms, a similar story appears. The further a house is from London, the cheaper the relative cost of a habitable room becomes.</p>
+     <p>Note – the GDHI dataset and the API I scraped the geolocations from often phrase place names differently. As such, data were lost when I combined the two. Since these differences were probably random, I assumed no bias arose so tolerated the data loss.</p>
+    
         <div class="chart" id="projectChart4">
 <script>
 var myProjectChart4 = "DfLCostPerRoomIncControlled.json";
@@ -70,8 +83,10 @@ vegaEmbed('#projectChart4', myProjectChart4);
 </div>
     
 
-      <p>Candlestick chart on income percentiles across England.</p>
-        <div class="chart" id="projectChart5">
+    <h3>Incomes</h3>
+      <p>As an aside I looked to see whether income inequalities were skewing results. Income distributions are similar in the North and Midlands but are more unequal in the South. Therefore, incomes in the South are skewed by the top earners more so than elsewhere in England. This means a greater number of people are earning below average incomes, meaning, if anything, the relative costs of housing I report are underestimates for areas of high inequality like the South.</p>
+        
+    <div class="chart" id="projectChart5">
 <script>
 var myProjectChart5 = "incomeCandlestick.json";
 vegaEmbed('#projectChart5', myProjectChart5);
@@ -80,19 +95,19 @@ vegaEmbed('#projectChart5', myProjectChart5);
 </div>
     
     
-    <h3>A little later on...</h3>
-    <p>It seems as though what really matters is distance from London. However, some important metrics like life satisfaction (and whatever else) do not change much as you leave the capital.</p>
+    <h3>Locations</h3>
+    <p>The location of housing also factors into its quality. My next chart uses Numbeo’s pollution index as, unlike most others, it considers a wide range of metrics related to the quality of a house’s location such as greenspace and comfortability perception, and not just air pollution. Lower values indicate a cleaner living environment and a greater satisfaction rate. This index is generally greater in southern regions – especially London.</p>
+    <p>A similar data loss issue occurs here as before. However, since the dataset was already small (as pollution data were only available for cities), I found a solution. I scraped a city/region list from Wikipedia, tidied the data and formatted it in a way recognisable by Numbeo’s API.</p>
       
-    <div class="chart" id="projectChart6">
+        <div class="chart" id="projectChart6">
 <script>
-var myProjectChart6 = "DfLLifeSatisfaction.json";
+var myProjectChart6 = "pollution.json";
 vegaEmbed('#projectChart6', myProjectChart6);
 </script>
 
 </div>
-    
-       
-     <p>Chart on distance from London and safety index.</p>
+           
+     <p>How safe a neighbourhood is factors into the quality of location. My next chart shows the regression of Numbeo’s safety index on distance from London. Evidently, distance from London is not a good predictor of safety – areas are not systematically safer as distance increases.</p>
         <div class="chart" id="projectChart7">
 <script>
 var myProjectChart7 = "DfLSafety.json";
@@ -102,16 +117,10 @@ vegaEmbed('#projectChart7', myProjectChart7);
 </div>
  
     
+    <h3>Conclusions</p>
+    <p>Housing is relatively cheaper the further from London it is. Based on room numbers and pollution, more quality houses are also relatively cheaper outside England’s capital, although the neighbourhoods they are in are no safer. Further research using Zoopla’s property API to more rigorously investigate how housing quality changes with distance from London would be interesting, as would an analysis of housing and distance from the capital in other countries.</p>
     
-     <p>Chart on pollution by region.</p>
-        <div class="chart" id="projectChart8">
-<script>
-var myProjectChart8 = "pollution.json";
-vegaEmbed('#projectChart8', myProjectChart8);
-</script>
-
-</div>
-  
+ 
     
     <br>
     <br>
