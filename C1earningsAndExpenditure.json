@@ -6,7 +6,7 @@
   },
   "title": {
     "text": "Earnings and Expenditure Across England",
-    "subtitle": "Earnings in Super-Region = Average of Median Weekly Earnings in Consituent Regions",
+    "subtitle": ["Earnings in Super-Region", "= Average of Median Weekly Earnings in Consituent Regions"],
     "subtitleFontStyle": "italic",
     "subtitleFontSize": "12",
     "font": "Franklin Gothic Book",
